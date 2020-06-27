@@ -1,0 +1,54 @@
+### Database Tables ###
+
+#- admins => separated table for super admins 
+#- users  => two type of users ( Seeker , Company ) -> laratrust 
+#- seeker_profiles & company_profiles ( one to one morph with users table ) 
+#- types - categories - skills - countries  for each job 
+#- taggables => plymorph relation ( Job , Post )
+#- posts created just by admin
+#- comments => but not used ( Disqus plugin Used )
+#- jobs table 
+#- job_skill table => many to many 
+#- job_seeker => many to many ( seeker can save job )
+#- job_applicant => many to many ( seeker can apply for jobs )
+#- notifications table 
+#- contacts table 
+
+### Roles and Permissions ###
+
+1 - super admin can do anything in dashboard plus he notified about new contacts ( not realtime for now ) 
+
+2 - seeker
+
+        # can save job and remove it
+        # apply job and remove it
+
+
+3 - company 
+
+        # can CRUD job  
+        # notified if any seeker apply for job 
+        # cancel applicant from job applicants ( default message sent to seeker to notify him )
+
+4 - User ( company,seeker )
+
+       # can edit profile and change password
+
+5 - Anonymouse user 
+
+               # show jobs and companies
+               # register & login 
+               # show posts   
+
+
+## Site Features  ##
+
+# Login & register
+# contact with admin 
+# filters by ( tags , titles , Others )
+# upload cv 
+# and other
+
+
+
+
